@@ -6,16 +6,21 @@ img {
 
 h3 {
   position: relative;
-  left: 200px;
-  bottom: 80px;
+  left: 30%;
+  top: 5px;
+  display: inline-block;
 }
 
 button {
   position: relative;
   left: 90%;
-  bottom: 120px;
+  bottom: 60px;
 }
 
 .well {
   height: 110px;
+}
+
+.clickable {
+  cursor: pointer;
 }

@@ -1,7 +1,7 @@
 <div class="well well-sm">
   <div (click)="goToDetailPage(member)">
-    <img src={{member.imgUrl}} alt="picture of member">
-    <h3>{{member.name}}</h3>
+    <img src={{member.imgUrl}} alt="picture of member" class="clickable">
+    <h3 class="clickable">{{member.name}}</h3>
   </div>
     <button *ngIf="!editMode && currentRoute === '/admin'" (click)="setEditMode(true)" class="btn btn-success">Edit</button>
 </div>

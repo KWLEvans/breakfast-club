@@ -12,15 +12,15 @@ import { MemberService } from './../member.service';
 export class MemberFormComponent implements OnInit {
   @Input() memberToEdit: Member;
   @Output() submittedSender = new EventEmitter();
-  model: Member;
+  member: Member;
 
   constructor(private memberService: MemberService) { }
 
   ngOnInit() {
     if (this.memberToEdit) {
-      this.model = this.memberToEdit;
+      this.member = this.memberToEdit;
     } else {
-      this.model = new Member("name", "Protein", "bio", "imgUrl", 2);
+      this.member = new Member("name", "Protein", "bio", "imgUrl", 2);
     }
   }
 
@@ -31,5 +31,9 @@ export class MemberFormComponent implements OnInit {
       this.memberService.saveMember(memberObject);
     }
     this.submittedSender.emit();
+  }
+
+  delete(member) {
+    this.memberService.deleteMember(member.$key);
   }
 }

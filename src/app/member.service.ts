@@ -33,4 +33,8 @@ export class MemberService {
     });
   }
 
+  deleteMember(memberId) {
+    this.getMemberById(memberId).remove();
+  }
+
 }

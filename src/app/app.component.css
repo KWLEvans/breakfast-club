@@ -1,0 +1,10 @@
+h1 {
+  display: inline-block;
+  position: relative;
+}
+
+#buttons-div {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+}

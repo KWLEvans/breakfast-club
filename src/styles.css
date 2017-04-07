@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+  background-color: slategray;
+}
+
+.panel, .well, .panel-heading {
+  background-color: rgba(100, 150, 200, .5) !important;
+  color: white !important;
+}

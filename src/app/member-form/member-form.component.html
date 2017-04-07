@@ -1,6 +1,6 @@
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3>Add a new member!</h3>
+    <h3><span *ngIf="!memberToEdit">Add a new member!</span><span *ngIf="memberToEdit">Edit {{member.name}}</span></h3>
   </div>
   <div class="panel-body form-group">
     <form (ngSubmit)="submitForm(member)" #memberForm="ngForm">

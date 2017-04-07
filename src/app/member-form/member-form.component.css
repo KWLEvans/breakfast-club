@@ -4,3 +4,8 @@
 .ng-invalid:not(form)  {
   border-left: 5px solid #a94442; /* red */
 }
+
+.panel {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}

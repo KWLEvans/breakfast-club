@@ -17,7 +17,7 @@ You will need the following things properly installed on your computer.
 **Step 1**: Clone this repository to your local computer
 
 ```console
-git clone https://github.com/KWLEvans/ingestion-log
+git clone https://github.com/KWLEvans/breakfast-club
 ```
 
 **Step 2**: Install all development and production dependencies from the project root directory

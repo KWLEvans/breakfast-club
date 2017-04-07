@@ -1,0 +1,15 @@
+img {
+  height: 90px;
+  width: 120px;
+  position: relative;
+}
+
+h3 {
+  position: relative;
+  left: 200px;
+  bottom: 80px;
+}
+
+.well {
+  height: 110px;
+}

@@ -1,48 +1,4 @@
 <button *ngIf="!addNewMember" (click)="setAddNewMember(true)" class="btn btn-success">Add New Member</button>
 <button *ngIf="addNewMember" (click)="setAddNewMember(false)" class="btn btn-warning">Hide</button>
-<div *ngIf="addNewMember" class="panel panel-default">
-  <div class="panel-heading">
-    <h3>Add a new member!</h3>
-  </div>
-  <div class="panel-body form-group">
-    <form (ngSubmit)="submitForm(model)" #memberForm="ngForm">
-    <label for="name">Name:</label>
-    <input [(ngModel)]="model.name" #name="ngModel" id="name" name="name" class="form-control" required>
-    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-          Name is required
-    </div>
-
-    <label for="type">Type:</label>
-    <select [(ngModel)]="model.type" #type="ngModel" id="type" name="type" class="form-control" required>
-      <div [hidden]="type.valid || type.pristine" class="alert alert-danger">
-          Type is required
-    </div>
-      <option value="Protein">Protein</option>
-      <option value="Grain">Grain</option>
-      <option value="Fruit">Fruit</option>
-    </select>
-
-    <label for="imgUrl">Image URL:</label>
-    <input [(ngModel)]="model.imgUrl" #imgUrl="ngModel" id="imgUrl" name="imgUrl" class="form-control" required>
-    <div [hidden]="imgUrl.valid || imgUrl.pristine" class="alert alert-danger">
-          Image URL is required
-    </div>
-
-    <label for="calories">Calories:</label>
-    <input [(ngModel)]="model.calories" #calories="ngModel" id="calories" name="calories" class="form-control" type="number" required>
-    <div [hidden]="calories.valid || calories.pristine" class="alert alert-danger">
-          Calories are required
-    </div>
-
-    <label for="bio">Biography:</label>
-    <textarea ngDefaultControl [(ngModel)]="model.bio" #bio="ngModel" id="bio" name="bio" class="form-control" rows="5" required></textarea>
-    <div [hidden]="bio.valid || bio.pristine" class="alert alert-danger">
-          Biography is required
-    </div>
-
-    <button class="btn btn-success" type="submit" [disabled]="!memberForm.form.valid">Submit</button>
-
-    </form>
-  </div>
-</div>
+<app-member-form *ngIf="addNewMember" (submittedSender)="setAddNewMember(false)"></app-member-form>
 <app-home></app-home>

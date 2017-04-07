@@ -1,0 +1,39 @@
+{
+  "members" : {
+    "-Kh8EZZf26oosGtXJU0G" : {
+      "bio" : "Eggs have always been a bit of a nerd. They love to learn and find out new information, but for the life of them, they just can't talk to girls! Maybe another member of the Breakfast Club can help them find the courage to be a little more outgoing.",
+      "calories" : 150,
+      "imgUrl" : "http://pngimg.com/uploads/egg/egg_PNG14.png",
+      "name" : "Eggs",
+      "type" : "Protein"
+    },
+    "-Kh8EZZi1IlInjhh8kKa" : {
+      "bio" : "Pancakes are the all-American breakfast. No classic, middle-America morning is complete with out good old flapjacks! There's no one more popular, but pancakes lack substance deep down...",
+      "calories" : 240,
+      "imgUrl" : "http://www.ihop.com/-/media/DineEquity/IHop/Images/Menu/MenuItems/Pancakes/Harvest-Grain-and-Nut-Pancakes/Harvest_Grain_Nut_Pancakes.ashx",
+      "name" : "Pancakes",
+      "type" : "Grain"
+    },
+    "-Kh8EZZi1IlInjhh8kKb" : {
+      "bio" : "Oatmeal can seem one dimensional and bland, but there's so much more to it! It's a stick-to-your-ribs kind of character that you just can't give up once you really get to know it.",
+      "calories" : 160,
+      "imgUrl" : "http://www.quakeroats.com/images/default-source/products/bananamaplebowl_flavor_flanker_hero",
+      "name" : "Oatmeal",
+      "type" : "Grain"
+    },
+    "-Kh8EZZi1IlInjhh8kKc" : {
+      "bio" : "Strawberries are the sweetest and most alluring member of the Breakfast Club. They haven't always been aware of others because everyone lavishes them with so much attention. They're a little green now, but once they get a bit more mature, they'll be 100% sweet.",
+      "calories" : 40,
+      "imgUrl" : "http://pngimg.com/uploads/strawberry/strawberry_PNG2621.png",
+      "name" : "Strawberries",
+      "type" : "Fruit"
+    },
+    "-Kh8fAz8wpjPZP4kVkYv" : {
+      "bio" : "Lucky Charms is very unpredictable. At times they can be delicious, even a bit too sweet. Other times, they're incredibly bland. Their divided personality has divisive effects and people either love or hate them.",
+      "calories" : 360,
+      "imgUrl" : "http://www.clear99.com/wp-content/uploads/2014/09/LuckyCharms_Bowl.png",
+      "name" : "Lucky Charms",
+      "type" : "Grain"
+    }
+  }
+}

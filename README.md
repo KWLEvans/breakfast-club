@@ -14,6 +14,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
+This site is live on Firebase [here](https://breakfast-club-81122.firebaseapp.com/admin)!
+
 **Step 1**: Clone this repository to your local computer
 
 ```console

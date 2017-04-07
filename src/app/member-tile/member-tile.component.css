@@ -10,6 +10,12 @@ h3 {
   bottom: 80px;
 }
 
+button {
+  position: relative;
+  left: 90%;
+  bottom: 120px;
+}
+
 .well {
   height: 110px;
 }

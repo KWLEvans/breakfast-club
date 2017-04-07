@@ -38,7 +38,7 @@
           Biography is required
     </div>
 
-    <button class="btn btn-success" type="submit" [disabled]="!memberForm.form.valid">Submit</button>
+    <button class="btn btn-success" type="submit" [disabled]="!memberForm.form.valid"><span *ngIf="!memberToEdit">Add Member</span><span *ngIf="memberToEdit">Done Editing</span></button>
 
     </form>
   </div>

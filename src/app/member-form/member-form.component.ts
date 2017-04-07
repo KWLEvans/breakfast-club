@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 import { Member } from './../member.model';
 import { MemberService } from './../member.service';
@@ -10,16 +10,26 @@ import { MemberService } from './../member.service';
   providers: [ MemberService ]
 })
 export class MemberFormComponent implements OnInit {
+  @Input() memberToEdit: Member;
   @Output() submittedSender = new EventEmitter();
-  model: Member = new Member("name", "Protein", "bio", "imgUrl", 2);
+  model: Member;
 
   constructor(private memberService: MemberService) { }
 
   ngOnInit() {
+    if (this.memberToEdit) {
+      this.model = this.memberToEdit;
+    } else {
+      this.model = new Member("name", "Protein", "bio", "imgUrl", 2);
+    }
   }
 
-  submitForm(memberToSave) {
-    this.memberService.saveMember(memberToSave);
+  submitForm(memberObject) {
+    if (this.memberToEdit) {
+      this.memberService.updateMember(memberObject);
+    } else {
+      this.memberService.saveMember(memberObject);
+    }
     this.submittedSender.emit();
   }
 }

@@ -22,4 +22,15 @@ export class MemberService {
     return this.angularFire.database.object('members/' + memberId);
   }
 
+  updateMember(memberObject) {
+    let memberToUpdate = this.getMemberById(memberObject.$key);
+    memberToUpdate.update({
+      name: memberObject.name,
+      type: memberObject.type,
+      bio: memberObject.bio,
+      imgUrl: memberObject.imgUrl,
+      calories: memberObject.calories
+    });
+  }
+
 }

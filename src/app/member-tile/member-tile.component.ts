@@ -10,9 +10,16 @@ import { Member } from './../member.model';
 })
 export class MemberTileComponent implements OnInit {
   @Input() member;
+  editMode: boolean = false;
+  currentRoute: string = this.router.url;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  setEditMode(value: boolean) {
+    this.editMode = value;
   }
 
   goToDetailPage(clickedMember) {

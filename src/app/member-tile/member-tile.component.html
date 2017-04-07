@@ -1,4 +1,8 @@
-<div class="well well-sm" (click)="goToDetailPage(member)">
+<div class="well well-sm">
+  <div (click)="goToDetailPage(member)">
     <img src={{member.imgUrl}} alt="picture of member">
     <h3>{{member.name}}</h3>
+  </div>
+    <button *ngIf="!editMode && currentRoute === '/admin'" (click)="setEditMode(true)" class="btn btn-success">Edit</button>
 </div>
+<app-member-form *ngIf="editMode && currentRoute === '/admin'" [memberToEdit]="member" (submittedSender)="setEditMode(false)"></app-member-form>

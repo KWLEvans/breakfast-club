@@ -1,0 +1,33 @@
+<button *ngIf="!addNewMember" (click)="setAddNewMember(true)" class="btn btn-success">Add New Member</button>
+<button *ngIf="addNewMember" (click)="setAddNewMember(false)" class="btn btn-warning">Hide</button>
+<div *ngIf="addNewMember" class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add a new member!</h3>
+  </div>
+  <div class="panel-body form-group">
+    <form>
+    <label for="name">Name:</label>
+    <input [(ngModel)]="model.name" id="name" name="name" class="form-control">
+
+    <label for="type">Type:</label>
+    <select [(ngModel)]="model.type" id="type" name="type" class="form-control">
+      <option value="Protein">Protein</option>
+      <option value="Grain">Grain</option>
+      <option value="Fruit">Fruit</option>
+    </select>
+
+    <label for="imgUrl">Image URL:</label>
+    <input [(ngModel)]="model.imgUrl" id="imgUrl" name="imgUrl" class="form-control">
+
+    <label for="calories">Calories:</label>
+    <input [(ngModel)]="model.calories" id="calories" name="calories" class="form-control" type="number">
+
+    <label for="bio">Biography:</label>
+    <textarea ngDefaultControl [(ngModel)]="model.bio" id="bio" name="bio" class="form-control" rows="5"></textarea>
+
+    <button class="btn btn-success" (click)="submitForm(model)">Submit</button>
+
+    </form>
+  </div>
+</div>
+<app-home></app-home>

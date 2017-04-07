@@ -76,8 +76,7 @@ ng serve
   * `member.service`: service for CRUD functionalities on members on Firebase
   * `app.component`: base page with router-outlet
   * `''` route:
-    * `home.component`: home page, if reached through `'admin'` route, users can access create
-      * `create-member.component`: component for creating users
+    * `home.component`: home page
     * `member-filter.pipe`: custom pipe for filtering members on home page
       * `member-tile.component`: tile to be displayed for each member on home page, if reached through `'admin'` route, users can access edit
         * `edit-member.component`: toggleable form for editing member information, or deleting users
@@ -85,6 +84,7 @@ ng serve
   * `'members/:id'` route: dynamic route to view individual members details
     * `member-detail.component`: component for displaying all details of a given member
   * `'admin'` route: for implementing CUD parts of CRUD
+    * `admin.component`: component for creating users, contains `home.component`
 
 4. UX/UI
   * Include bootstrap

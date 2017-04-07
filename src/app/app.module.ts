@@ -9,6 +9,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { MemberTileComponent } from './member-tile/member-tile.component';
+import { MemberDetailComponent } from './member-detail/member-detail.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -21,7 +22,8 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     HomeComponent,
-    MemberTileComponent
+    MemberTileComponent,
+    MemberDetailComponent
   ],
   imports: [
     BrowserModule,

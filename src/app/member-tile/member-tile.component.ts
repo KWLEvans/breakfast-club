@@ -1,4 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { Member } from './../member.model';
 
 @Component({
   selector: 'app-member-tile',
@@ -7,9 +10,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MemberTileComponent implements OnInit {
   @Input() member;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goToDetailPage(clickedMember) {
+    this.router.navigate(['members', clickedMember.$key]);
   }
 
 }

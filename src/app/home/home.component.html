@@ -1,8 +1,16 @@
 <div class="panel panel-default">
   <div class="panel-heading">
     <h2>Current Members</h2>
+    <hr>
+    <label for="filter">Sort By: </label>
+    <select [(ngModel)]="sortType" class="form-control" id="filter">
+      <option value="all">All Members</option>
+      <option value="Protein">Only Proteins</option>
+      <option value="Grain">Only Grains</option>
+      <option value="Fruit">Only Fruit</option>
+    </select>
   </div>
   <div class="panel-body">
-    <app-member-tile *ngFor="let member of members | async" [member]="member"></app-member-tile>
+    <app-member-tile *ngFor="let member of members | async | memberFilter:sortType" [member]="member"></app-member-tile>
   </div>
 </div>

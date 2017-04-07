@@ -11,7 +11,7 @@ import { HomeComponent } from './../home/home.component';
   providers: [ MemberService ]
 })
 export class AdminComponent implements OnInit {
-  model: Member = new Member("name", "type", "bio", "imgUrl", 2);
+  model: Member = new Member("name", "Protein", "bio", "imgUrl", 2);
   addNewMember: boolean = false;
 
   constructor(private memberService: MemberService) {
@@ -22,6 +22,10 @@ export class AdminComponent implements OnInit {
 
   setAddNewMember(value: boolean) {
     this.addNewMember = value;
+  }
+
+  newMember() {
+    this.model = new Member("name", "Protein", "bio", "imgUrl", 2);
   }
 
   submitForm(memberToSave) {

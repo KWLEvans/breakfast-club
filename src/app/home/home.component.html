@@ -1,1 +1,8 @@
-<app-member-tile *ngFor="let member of members | async" [member]="member"></app-member-tile>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2>Current Members</h2>
+  </div>
+  <div class="panel-body">
+    <app-member-tile *ngFor="let member of members | async" [member]="member"></app-member-tile>
+  </div>
+</div>
